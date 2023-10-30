@@ -1,0 +1,114 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Jonny 1924789, HP Inc., LIC=HIVP9-NXUY2-XZ1WZ-XK7XH-47UGM-XJR90
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Community  Version: 5.37.0.0
+Toolchain Path:  E:\Embedded System\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+E:\Embedded System\Project\Lab_Lessons_Source\1_MIni_Project\Timer.uvprojx
+Project File Date:  01/05/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'E:\Embedded System\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+lcd.c(1): warning: In file included from...
+./lcd.h(27): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void LCD_erase();
+              ^
+               void
+./lcd.h(31): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+lcd.c(30): warning: variable 'delay' set but not used [-Wunused-but-set-variable]
+        unsigned long delay;
+                      ^
+lcd.c(59): warning: no previous extern declaration for non-static variable 'address_table' [-Wmissing-variable-declarations]
+unsigned char address_table[] = {
+              ^
+lcd.c(59): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned char address_table[] = {
+^
+lcd.c(66): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        lcdEN &= ~0x04; //return en to 0
+              ~~ ^~~~~
+lcd.c(76): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        lcdDB = (c & 0x0F) << 2; //set low niblle
+              ~ ~~~~~~~~~~~^~~~
+lcd.c(88): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        lcdDB = (c & 0x0F) << 2; //low nibble
+              ~ ~~~~~~~~~~~^~~~
+lcd.c(176): warning: declaration shadows a variable in the global scope [-Wshadow]
+        unsigned char address_table[] = {
+                      ^
+lcd.c(59): note: previous declaration is here
+unsigned char address_table[] = {
+              ^
+lcd.c(176): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        unsigned char address_table[] = {
+                      ^
+lcd.c(205): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+lcd.c(200): warning: no previous prototype for function 'LCD_erase' [-Wmissing-prototypes]
+void LCD_erase()
+     ^
+./lcd.h(27): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void LCD_erase();
+     ^
+               void
+lcd.c(200): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void LCD_erase()
+              ^
+12 warnings generated.
+compiling lcd.c...
+linking...
+Program Size: Code=15544 RO-data=1100 RW-data=0 ZI-data=744  
+".\Objects\Timer.axf" - 0 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  E:/Embedded System/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  E:/Embedded System/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+      Source file:   Device/Source/system_TM4C123.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
